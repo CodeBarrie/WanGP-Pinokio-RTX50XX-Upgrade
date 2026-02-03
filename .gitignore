@@ -1,0 +1,14 @@
+# Cloned app repository
+app/
+
+# Cache folder
+cache/
+
+# Logs
+logs/
+
+# Pinokio metadata
+pinokio_meta.json
+
+# Claude Code session data
+.claude/
