@@ -45,6 +45,9 @@ Copy the following files into your existing Pinokio `wan.git` folder (usually at
 4. **Click "Update"** - Pulls the latest WanGP v10.61 code
 5. **Click "Start"** - Launch and enjoy!
 
+![Pinokio Buttons](pinokio-buttons.png)
+*These are the buttons you're looking for in the Pinokio sidebar*
+
 ---
 
 ## Changes From Original Launcher
