@@ -18,6 +18,26 @@ This launcher is designed to work with the excellent [Pinokio](https://pinokio.c
 
 ---
 
+## ⚠️ IMPORTANT: BACKUP YOUR FILES FIRST ⚠️
+
+**The Reset step DELETES the entire `app/` folder. This includes:**
+
+- **Downloaded Models** (Wan2.1 T2V, Wan2.2 I2V, LTX-2, Hunyuan, Flux, etc.)
+- **Checkpoints** (`app/ckpts/`)
+- **LoRAs** (`app/loras/`)
+- **Settings** (`app/settings/`)
+
+### Before you begin:
+1. Copy your `app/ckpts/` folder somewhere safe
+2. Copy your `app/loras/` folder somewhere safe
+3. Copy any other files you want to keep
+
+### After the upgrade:
+- Copy your backed-up folders back into the new `app/` folder
+- **OR** re-download your models through WanGP
+
+---
+
 ## Who Is This For?
 
 **RTX 50XX owners ONLY** who want to take advantage of:
@@ -31,34 +51,30 @@ If you have an **RTX 40XX or older**, stick with the standard Pinokio WanGP laun
 
 ## How To Use
 
-### Step 1: Clone These Files
+### Step 1: Backup Your Files (DO THIS FIRST!)
+Copy these folders somewhere safe before proceeding:
+- `pinokio/api/wan.git/app/ckpts/`
+- `pinokio/api/wan.git/app/loras/`
+
+### Step 2: Copy These Files
 Copy the following files into your existing Pinokio `wan.git` folder (usually at `pinokio/api/wan.git/`):
 - `install.js`
 - `torch.js`
 - `update.js`
 - `.gitignore`
 
-### Step 2: Reset + Install + Update (in Pinokio)
-
-> **What happens to my models?**
->
-> | Folder | Location | After Reset |
-> |--------|----------|-------------|
-> | HuggingFace models | `cache/HF_HOME/` | **SAFE** - Not deleted |
-> | Checkpoints | `app/ckpts/` | **DELETED** - Back these up! |
-> | LoRAs | `app/loras/` | **DELETED** - Back these up! |
-> | Python environment | `app/env/` | **DELETED** - This is intended |
->
-> **Before clicking Reset:** If you have custom checkpoints or LoRAs in the `app/` folder, copy them somewhere safe first!
-
+### Step 3: Reset + Install + Update (in Pinokio)
 1. **Open Pinokio** and navigate to WanGP
-2. **Click "Reset"** - This removes your old Python 3.10 environment
-3. **Click "Install"** - Creates a fresh Python 3.11 environment with PyTorch 2.10/CUDA 13.0
+2. **Click "Reset"** - Removes the old `app/` folder (including your models!)
+3. **Click "Install"** - Creates fresh Python 3.11 environment with PyTorch 2.10/CUDA 13.0
 4. **Click "Update"** - Pulls the latest WanGP v10.61 code
-5. **Click "Start"** - Launch and enjoy!
+5. **Click "Start"** - Launch WanGP!
 
 ![Pinokio Buttons](pinokio-buttons.png)
 *These are the buttons you're looking for in the Pinokio sidebar*
+
+### Step 4: Restore Your Files
+Copy your backed-up `ckpts/` and `loras/` folders back into `pinokio/api/wan.git/app/`
 
 ---
 
@@ -99,4 +115,4 @@ Copy the following files into your existing Pinokio `wan.git` folder (usually at
 
 This is a **community-contributed temporary upgrade path** based on DeepBeepMeep's official upgrade instructions. Once Pinokio's official WanGP launcher is updated for RTX 50XX, this repo may become obsolete.
 
-**Use at your own risk.** Always backup your settings before resetting!
+**Use at your own risk. Always backup your files before resetting!**
