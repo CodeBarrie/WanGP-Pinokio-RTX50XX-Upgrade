@@ -39,6 +39,18 @@ Copy the following files into your existing Pinokio `wan.git` folder (usually at
 - `.gitignore`
 
 ### Step 2: Reset + Install + Update (in Pinokio)
+
+> **What happens to my models?**
+>
+> | Folder | Location | After Reset |
+> |--------|----------|-------------|
+> | HuggingFace models | `cache/HF_HOME/` | **SAFE** - Not deleted |
+> | Checkpoints | `app/ckpts/` | **DELETED** - Back these up! |
+> | LoRAs | `app/loras/` | **DELETED** - Back these up! |
+> | Python environment | `app/env/` | **DELETED** - This is intended |
+>
+> **Before clicking Reset:** If you have custom checkpoints or LoRAs in the `app/` folder, copy them somewhere safe first!
+
 1. **Open Pinokio** and navigate to WanGP
 2. **Click "Reset"** - This removes your old Python 3.10 environment
 3. **Click "Install"** - Creates a fresh Python 3.11 environment with PyTorch 2.10/CUDA 13.0
