@@ -17,10 +17,5 @@ module.exports = {
       path: "app",
       message: "uv pip install -r requirements.txt"
     }
-  }, {
-    method: "notify",
-    params: {
-      html: "Update completed! Click 'Start' to launch the updated app."
-    }
   }]
 }

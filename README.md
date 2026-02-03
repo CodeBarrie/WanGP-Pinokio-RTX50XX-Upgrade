@@ -53,10 +53,8 @@ Copy the following files into your existing Pinokio `wan.git` folder (usually at
 |------|--------------|
 | `install.js` | Added `venv_python: "3.11"`, enabled all acceleration packages |
 | `torch.js` | Complete rewrite for PyTorch 2.10.0+cu130 and new wheel URLs |
-| `update.js` | Added completion notification sound (heads up!) |
+| `update.js` | No changes from original |
 | `.gitignore` | New file to exclude app/, cache/, logs/, .claude/ |
-
-> **Note:** The `update.js` now plays a **notification sound** when complete. This is new behavior!
 
 ---
 
