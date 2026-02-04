@@ -82,7 +82,7 @@ Copy your backed-up `ckpts/` and `loras/` folders back into `pinokio/api/wan.git
 
 | File | What Changed |
 |------|--------------|
-| `install.js` | Added `venv_python: "3.11"`, enabled all acceleration packages |
+| `install.js` | Added `venv_python: "3.11"`, enabled all acceleration packages, **oops forgot NVFP4 Kernels, added** |
 | `torch.js` | Complete rewrite for PyTorch 2.10.0+cu130 and new wheel URLs |
 | `update.js` | No changes from original |
 | `.gitignore` | New file to exclude app/, cache/, logs/, .claude/ |
@@ -100,6 +100,7 @@ Copy your backed-up `ckpts/` and `loras/` folders back into `pinokio/api/wan.git
 | Triton | Latest |
 | Flash Attention | 2.8.3 |
 | xformers | Latest |
+| Light2xv NVFP4 Kernels | 0.0.2 |
 
 ---
 
