@@ -48,6 +48,25 @@ module.exports = {
         }
       }
     },
+    // Install Light2xv NVP4 Kernels for INT4/FP4 quantized support (RTX 50xx only)
+    {
+      when: "{{platform === 'win32'}}",
+      method: "shell.run",
+      params: {
+        venv: "env",
+        path: "app",
+        message: "uv pip install https://github.com/deepbeepmeep/kernels/releases/download/Light2xv/lightx2v_kernel-0.0.2+torch2.10.0-cp311-abi3-win_amd64.whl"
+      }
+    },
+    {
+      when: "{{platform === 'linux'}}",
+      method: "shell.run",
+      params: {
+        venv: "env",
+        path: "app",
+        message: "uv pip install https://github.com/deepbeepmeep/kernels/releases/download/Light2xv/lightx2v_kernel-0.0.2+torch2.10.0-cp311-abi3-linux_x86_64.whl"
+      }
+    },
     {
       method: 'input',
       params: {
